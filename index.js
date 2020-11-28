@@ -1,7 +1,11 @@
 function depthFirstSearch(rootNode, vertices, edges)
 {
   let stack = [rootNode]
+<<<<<<< HEAD
   let visited = [rootNode]
+=======
+  let visited = []
+>>>>>>> 3c58bde007ed4a414ecac104035a8870aa45db5a
   
   while (stack.length !== 0)
   {
@@ -14,9 +18,14 @@ function depthFirstSearch(rootNode, vertices, edges)
       let adj = findAdjacent(currVertex.name, vertices, edges)
       //console.log(adj)
       addTo(adj, stack)
+<<<<<<< HEAD
       addTo(adj, visited)
       //console.log(stack)
       //visited.push(currVertex)
+=======
+      //console.log(stack)
+      addTo(adj, visited)
+>>>>>>> 3c58bde007ed4a414ecac104035a8870aa45db5a
     }
   }
   //console.log(visited)
@@ -69,6 +78,10 @@ function addTo(vertices, list)
 {
   for(var i = 0; i < vertices.length; i++)
   {
+<<<<<<< HEAD
     list.push(vertices[i])
+=======
+    list.unshift(vertices[i])
+>>>>>>> 3c58bde007ed4a414ecac104035a8870aa45db5a
   }
 }
